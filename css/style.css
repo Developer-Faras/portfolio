@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
 
 /* Import Library */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 
 /* Deaclare All Variables */
@@ -31,7 +31,7 @@ body{
     position: relative;
     line-height: 1.5;
     font-size: 16px;
-    font-family: var(--font-popins);
+    font-family: var(--font-slab);
 }
 
 ::before, ::after{
@@ -69,6 +69,42 @@ img{
 }
 section{
     padding: 0 15px;
+}
+section .container{
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+section .section-header{
+    display: block;
+    padding-top: 20px;
+    margin-bottom: 70px;
+}
+section .section-header .section-title{
+    font-size: 38px;
+    color: var(--text-900);
+    font-family: var(--font-slab);
+    font-weight: 800;
+    position: relative;
+}
+section .section-header .section-title:before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    background: var(--skin-color);
+    height: 6px;
+    width: 90px;
+    border-radius: 2px;
+}
+section .section-header .section-title:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -22px;
+    background: var(--skin-color);
+    height: 6px;
+    width: 50px;
+    border-radius: 2px;
 }
 
 .hidden{
@@ -244,6 +280,14 @@ section{
     bottom: 0;
     left: 270px;
     z-index: -1;
+    overflow-y: scroll;
+ }
+ .main-content::-webkit-scrollbar{
+    width: 10px;
+    background: #bebdff;
+ }
+ .main-content::-webkit-scrollbar-thumb{
+    background: var(--skin-color);
  }
 
 
@@ -353,4 +397,234 @@ section{
  }
 
 
- 
+
+
+ /* About Section */
+ .about .container{
+    padding-right: 3rem;
+ }
+.about .about-text{
+    display: block;
+    margin-bottom: 1rem;
+}
+.about .about-text .name{
+    font-size: 30px;
+    font-family: var(--font-slab);
+    color: var(--text-900);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.4px;
+    font-weight: 800;
+}
+.about .about-text .name .profetion{
+    color: var(--skin-color);
+}
+.about .about-text .dec{
+    color: var(--text-700);
+    font-weight: 500;
+    line-height: 28px;
+    font-size: 16px;
+    margin-bottom: 0.8rem;
+    /* padding-right: 4rem; */
+}
+
+/* About Biodata */
+.about .about-bio{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+}
+.about .about-bio .left{
+    flex: 0 0 60%;
+}
+.about .about-bio .left .bio-wraper{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+}
+.about .about-bio .left .bio-wraper .bio-row{
+    flex: 0 0 48%;
+}
+.about .about-bio .left .bio-wraper .bio-row .bio{
+    border-bottom: 1px solid #ddd;
+    padding: 0.6rem 0;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+    color: var(--text-900);
+    font-weight: 800;
+}
+.about .about-bio .left .bio-wraper .bio-row .bio .result{
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-700);
+    padding-left: 0.4rem;
+}
+.about .about-bio .left .btn-wraper{
+    display: block;
+    width: 100%;
+}
+.about .about-bio .left .btn-wraper a{
+    display: inline-block;
+    padding: 0.8rem 1.8rem;
+    margin-right: 1rem;
+    border-radius: 4px;
+    border: 2px solid var(--skin-color);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.about .about-bio .left .btn-wraper a.cv{
+    background: var(--skin-color);
+    color: #fff;
+}
+.about .about-bio .left .btn-wraper a.hire{
+    color: var(--skin-color);
+    background: transparent;
+}
+.about .about-bio .left .btn-wraper a.cv:hover{
+    transform: scale(0.9);
+    background: transparent;
+    color: var(--skin-color);
+}
+.about .about-bio .left .btn-wraper a.hire:hover{
+    transform: scale(0.9);
+    background: var(--skin-color);
+    color: #fff;
+}
+
+
+.about .about-bio .right{
+    flex: 0 0 32%;
+    padding-top: 0.8rem;
+}
+.about .about-bio .right .skill-wraper{
+    width: 100%;
+}
+.about .about-bio .right .skill-wraper .skill{
+    width: 100%;
+    padding: 0.2rem 0;
+    margin-bottom: 1rem;
+}
+.about .about-bio .right .skill-wraper .skill .text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 0.6rem;
+}
+.about .about-bio .right .skill-wraper .skill .text h5{
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-900);
+}
+.about .about-bio .right .skill-wraper .skill .progress-bar{
+    width: 100%;
+    height: 8px;
+    background: var(--bg-50);
+    border-radius: 2px;
+    overflow: hidden;
+}
+.about .about-bio .right .skill-wraper .skill .progress-bar .progress{
+    background: var(--skin-color);
+    height: 100%;
+}
+
+/* Another Skill  */
+.about .another-skill{
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+}
+.about .another-skill .anothor-skill-wraper{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.about .another-skill .anothor-skill-wraper .skill-card{
+    width: 17%;
+    padding: 1rem;
+    background: rgba(0,0,0,0.05);
+    margin: 0;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover Design */
+.about .another-skill .anothor-skill-wraper .skill-card:hover{
+    transform: scale(0.9);
+    background: rgba(0,0,0,0.1);
+}
+
+.about .another-skill .anothor-skill-wraper .skill-card .inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.about .another-skill .anothor-skill-wraper .skill-card #circle{
+    width: 80%;
+    height: 80%;
+}
+.about .another-skill .anothor-skill-wraper .skill-card #circle .parcent{
+    font-size: 10px;
+    font-weight: 800;
+    fill: var(--text-900);
+}
+
+.about .another-skill .anothor-skill-wraper .skill-card .name{
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text-900);
+}
+
+
+
+
+
+/* Circle Progress Bar Design */
+#circle{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+.circle{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.circle_background{
+    fill: none;
+    stroke: #bebdff;
+    stroke-width: 2px;
+}
+.circle_line{
+    stroke: var(--skin-color);
+    stroke-width: 2;
+    stroke-linecap: square;
+    fill: none;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+.circle_line.animate{
+    animation: circleFill 2s reverse;
+}
+
+@keyframes circleFill {
+    to { stroke-dasharray: 0 100; }
+}
+/* 
+.circle .parcent{
+    font-size: 10px;
+    font-weight: bold;
+} */
