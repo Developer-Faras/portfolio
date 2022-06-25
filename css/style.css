@@ -55,6 +55,9 @@ img{
     padding-left: 15px;
     padding-right: 15px;
 }
+.shadow-dark{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
 .container{
     max-width: 1100px;
     width: 100%;
@@ -585,10 +588,6 @@ section .section-header .section-title:after{
     color: var(--text-900);
 }
 
-
-
-
-
 /* Circle Progress Bar Design */
 #circle{
     position: relative;
@@ -623,8 +622,80 @@ section .section-header .section-title:after{
 @keyframes circleFill {
     to { stroke-dasharray: 0 100; }
 }
-/* 
-.circle .parcent{
-    font-size: 10px;
-    font-weight: bold;
-} */
+
+
+/* Education Experience Design */
+.about .education,
+.about .experience{
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-top: 2rem;
+    /* background: red; */
+}
+.about .edu-content h3.title{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-900);
+}
+.about .edu-content .timeline-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .edu-content .timeline-box .timeline{
+    padding: 30px 15px;
+    background: var(--bg-100);
+    border: 1px solid var(--bg-50);
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+}
+.about .edu-content .timeline .timeline-item{
+    position: relative;
+    padding-left: 35px; 
+    padding-bottom: 50px;
+}
+.about .edu-content .timeline .timeline-item:last-child{
+    padding-bottom: 0;
+}
+.about .edu-content .timeline .timeline-item:before{
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 7px;
+    background: var(--skin-color);
+}
+.about .edu-content .timeline .timeline-item .circle-dot{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: var(--skin-color);
+    border-radius: 50%;
+}
+.about .edu-content .timeline .timeline-item .timeline-date{
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--text-700);
+    line-height: 0;
+}
+.about .edu-content .timeline .timeline-item .timeline-date i{
+    margin-right: 5px;
+}
+.about .edu-content .timeline .timeline-item .timeline-title{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-900);
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+.about .edu-content .timeline .timeline-item .timeline-text{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-700);
+    line-height: 25px;
+}
