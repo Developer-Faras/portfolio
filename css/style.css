@@ -4,7 +4,7 @@
 
 /* Import Library */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
 /* Deaclare All Variables */
 :root {
@@ -866,8 +866,106 @@ section .section-header .section-title:after {
     max-width: 49%;
     max-height: 24.6rem;
     position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.portfolio .portfolio-item:hover{
+    transform: scale(0.95);
 }
 .portfolio .portfolio-item img{
     width: 100%;
     margin-bottom: -6px;
 }
+.portfolio .portfolio-item .text-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    z-index: 1000;
+    animation-delay: 250ms;
+    opacity: 0;
+    transition: all 0.8s ease-out;
+}
+.portfolio .portfolio-item:hover .text-box{
+    animation: zoomInDown; 
+    animation-duration: 0.6s; 
+    opacity: 1;
+}
+
+.portfolio .portfolio-item .text-box .title{
+    font-size: 34px;
+    color: #fff;
+    font-weight: 800;
+    word-spacing: 6px;
+}
+.portfolio .portfolio-item .text-box .desc{
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0.8rem;
+}
+.portfolio .portfolio-item .text-box .usages{
+    display: block;
+    text-align: left;
+    color: #fff;
+    margin-top: 0.5rem;
+    width: 66%;
+    list-style: auto;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+.portfolio .portfolio-item .text-box .usages .list-title{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+}
+.portfolio .portfolio-item .text-box .usages .list-item{
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 0.1rem 0;
+    margin-left: 1.2rem;
+}
+
+
+.portfolio .portfolio-item .text-box .btn-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portfolio .portfolio-item .text-box a.link{
+    text-decoration: none;
+    background: #fff;
+    margin: 0 1rem;
+    padding: 0.8rem 1.2rem;
+    color: var(--skin-color);
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.portfolio .portfolio-item .text-box a.link:hover{
+    background: var(--skin-color);
+    color: #fff;
+    transform: scale(0.92);
+}
+
+.portfolio .portfolio-item .text-box a.link i{
+    font-size: 18px;
+    margin-right: 0.5rem;
+}
+/* animate__ */
