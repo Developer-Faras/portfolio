@@ -969,3 +969,66 @@ section .section-header .section-title:after {
     margin-right: 0.5rem;
 }
 /* animate__ */
+
+
+/* Contact Design */
+.contact .extra-title{
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.contact .extra-title .title{
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--skin-color);
+    padding-bottom: 0.3rem;
+}
+.contact .extra-title .dec{
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-900);
+}
+
+.contact .box-content{
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+.contact .box-content .box{
+    flex: 0 0 24%;
+    max-width: 24%;
+    text-align: center;
+    background: var(--bg-100);
+    border: 1px solid var(--bg-50);
+    padding: 1rem 0;
+    box-sizing: border-box;
+    border-radius: 2px;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+.contact .box-content .box:hover{
+    box-shadow: 0 0 20px -9px var(--text-700);
+}
+
+.contact .box-content .box .icon-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--skin-color);
+    margin-bottom: 1rem;
+}
+.contact .box-content .box .text-box{
+    display: block;
+    text-align: center;
+}
+.contact .box-content .box .text-box .title{
+    font-size: 18px;
+    color: var(--text-900);
+    margin-bottom: 0rem;
+}
+.contact .box-content .box .text-box .result{
+    font-size: 16px;
+    color: var(--text-700);
+}
